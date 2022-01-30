@@ -4,6 +4,7 @@ import NavBar from "./components/NavBar.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from "./routes/Home.js";
 import { About } from "./routes/About.js";
+import { Flex } from "@chakra-ui/react";
 
 const App = () => {
 	return (
