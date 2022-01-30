@@ -2,6 +2,7 @@ import { Flex, Stack, Spacer } from "@chakra-ui/layout";
 import { Text } from "@chakra-ui/layout";
 import { Link } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
+import { Heading } from "@chakra-ui/react";
 
 const MenuItemStack = ({ handleIsOpen }) => {
 	return (
@@ -20,9 +21,9 @@ const BrandStack = () => {
 	return (
 		<Stack spacing={6} align="center" direction="row" pd={4} m={5}>
 			<RouterLink as={Link} to="/">
-				<Text fontSize="3xl" color="#FFC857" fontFamily="Open Sans">
+				<Heading size="4xl" color="#FFC857" fontFamily="Open Sans">
 					League Tracker
-				</Text>
+				</Heading>
 			</RouterLink>
 		</Stack>
 	);
@@ -37,6 +38,7 @@ const NavBar = ({ handleIsOpen }) => {
 			py={4}
 			justifyContent="center"
 			alignItems="center"
+			border="white 5px solid"
 		>
 			<BrandStack />
 			<Spacer />
