@@ -1,12 +1,20 @@
-import logo from "./logo.svg";
 import "./App.css";
+import React from "react";
+import NavBar from "./components/NavBar.js";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./routes/Home.js";
+import { About } from "./routes/About.js";
 
-function App() {
+const App = () => {
 	return (
-		<div className="App">
-			<h1>Placeholder</h1>
-		</div>
+		<Router>
+			<NavBar />
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/about" element={<About />} />
+			</Routes>
+		</Router>
 	);
-}
+};
 
 export default App;
